@@ -313,7 +313,7 @@ export const translations = {
     en: "Choose AI-Proof Careers",
   },
   "aiRisk.strategy.3.desc": {
-    th: "งานที่ต้องใช้มือ (ช่าง), judgment (แพทย์), หรือเป็นคนสร้าง AI เอง",
+    th: "งานที่ต้องใช้มือ (ช่าง), งานที่ต้องใช้วิจารณญาณ (แพทย์), หรือเป็นคนสร้าง AI เอง",
     en: "Jobs requiring hands (tradespeople), judgment (doctors), or building AI itself",
   },
   "aiRisk.strategy.4.title": {
