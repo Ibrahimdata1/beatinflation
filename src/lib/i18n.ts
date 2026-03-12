@@ -1,4 +1,4 @@
-export type Lang = "th" | "en";
+import type { Lang } from "./LanguageContext";
 
 export const translations = {
   // ===== Navbar =====
@@ -342,6 +342,22 @@ export const translations = {
 
 export type TranslationKey = keyof typeof translations;
 
+// Extra language translations - will be populated
+const extraTranslations: Record<string, Record<string, string>> = {};
+
+export function registerTranslations(lang: string, data: Record<string, string>) {
+  extraTranslations[lang] = data;
+}
+
 export function t(key: TranslationKey, lang: Lang): string {
-  return translations[key][lang];
+  // Check built-in th/en first
+  if (lang === "th" || lang === "en") {
+    return translations[key][lang];
+  }
+  // Check extra translations
+  if (extraTranslations[lang]?.[key]) {
+    return extraTranslations[lang][key];
+  }
+  // Fallback to English
+  return translations[key]["en"];
 }
