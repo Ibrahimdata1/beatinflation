@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
+import { initTranslations } from "./registerTranslations";
 
 export type Lang = "en" | "th" | "zh" | "es" | "ja" | "ko" | "ar" | "hi" | "pt" | "ru" | "fr" | "de";
 
@@ -32,6 +33,7 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+  initTranslations();
   const [lang, setLang] = useState<Lang>("en");
   const toggle = () => {
     const codes = LANGUAGES.map((l) => l.code);

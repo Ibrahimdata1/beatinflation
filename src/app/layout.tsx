@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Beat Inflation | วิธีเอาชนะเงินเฟ้อ ด้วยข้อมูลจริง",
+  title: "Beat Inflation | Real Data on How to Protect Your Wealth",
   description:
-    "วิเคราะห์เชิงลึกเรื่องเงินเฟ้อตามสำนักออสเตรียน เปรียบเทียบสินทรัพย์ เงินเดือน และอาชีพที่ชนะเงินเฟ้อได้จริง",
+    "In-depth analysis of real inflation (Austrian Economics). Compare assets, salaries, and careers that actually beat inflation.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th" className="dark">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
